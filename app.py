@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home():
     return "Hello from Flask on AWS EC2!"
 
+@app.route('/second')
+def second():
+    return "This is the second route!"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
